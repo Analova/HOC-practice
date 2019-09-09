@@ -16,6 +16,10 @@
     border-radius: 25px;
     padding: 20px;
 
+    &.user-list {
+        background-color: lightseagreen;
+    }
+
     .post {
         background-color: white;
         margin: 10px 0;
