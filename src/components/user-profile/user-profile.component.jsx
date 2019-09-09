@@ -11,7 +11,7 @@ class UserProfile extends React.Component {
   componentDidMount() {
     fetch("https://jsonplaceholder.typicode.com/posts")
       .then(response => response.json())
-      .then(data => this.setState({ posts: data }));
+      .then(data => this.setState({ posts: data.slice(0, 3) }));
   }
   render() {
     return (
@@ -20,7 +20,7 @@ class UserProfile extends React.Component {
         <h2>{this.props.email}</h2>
         Posts:
         {this.state.posts.map(post => (
-          <div>
+          <div className="post">
             <h1>{post.title}</h1>
             <h2>{post.body}</h2>
           </div>
